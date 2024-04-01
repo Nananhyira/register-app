@@ -67,7 +67,15 @@ a:hover{
 input[type=checkbox] {
   accent-color:rgba(22,22,22,0.15);
 }
-
+input[type="checkbox" i] {
+    background-color: rgba(22,22,22,0.15);
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
 input[type=checkbox] {
   accent-color: rgba(255, 255, 255, 0.733);
   width:20px;
