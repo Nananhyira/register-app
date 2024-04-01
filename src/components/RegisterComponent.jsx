@@ -1,25 +1,34 @@
 import "./register.css"
 import netflix from "../assets/2.png"
+import { useForm } from "react-hook-form"
 
 const RegisterComponent = () => {
+  const {register, handleSubmit}=useForm({defaultValues:{
+    email:"",password:"",
+  }})
+  
+  const onSubmit = (data) =>{
+    console.log(data);
+
+  }
   return (
 		<div className='mother-container'>
 			<img className='img' src={netflix} width='170px' height='100px' />
 			<div className='container'>
 				<h1 className='h1'>Sign In</h1>
-				<form>
+				<form onSubmit={handleSubmit(onSubmit)}>
 					<input
 						className='input'
 						type='email'
-						name='email'
 						placeholder='Email or phone number'
+            {...register("email")}
 					/>
 					<br />
 					<input
 						className='input'
 						type='password'
-						name='password'
 						placeholder='password'
+            {...register("password")}
 					/>
 					<br />
 					<button type='submit' className='sign-up'>

@@ -34,6 +34,7 @@ body {
 	margin: 8px auto;
   background: rgba(22,22,22,0.7);
   border-radius:5px;
+  color:rgb(255, 255, 255); 
 
 }
 img {
@@ -83,9 +84,7 @@ background-color: transparent;
   color:blue;
 }
 
-input[type="checkbox"] {
- background-color: rgba(0, 0, 0, 0.7);
-}
+
 
 .fp  .use{
   font-weight: bold;
