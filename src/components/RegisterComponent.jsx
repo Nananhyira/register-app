@@ -3,12 +3,13 @@ import netflix from "../assets/2.png"
 import { useForm } from "react-hook-form"
 
 const RegisterComponent = () => {
-  const {register, handleSubmit}=useForm({defaultValues:{
+  const {register, handleSubmit,reset}=useForm({defaultValues:{
     email:"",password:"",
   }})
   
   const onSubmit = (data) =>{
     console.log(data);
+    reset()
 
   }
   return (
@@ -28,7 +29,7 @@ const RegisterComponent = () => {
 						className='input'
 						type='password'
 						placeholder='password'
-            {...register("password")}
+            {...register("password", {required:true, maxlength:20})}
 					/>
 					<br />
 					<button type='submit' className='sign-up'>
@@ -42,7 +43,7 @@ const RegisterComponent = () => {
 					</div>
 
 					<h3 className='rm c'>
-						New to Netflix? 
+						New to Netflix?  
 						<span className='use'>
 							<a>Sign up now</a>
 						</span>
